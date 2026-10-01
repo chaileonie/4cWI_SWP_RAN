@@ -9,11 +9,13 @@
         .box {
             background-color: aliceblue;
             padding: 10px;
+            width: 200px;
+            height: 200px;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
+            grid-template-columns: 100%;
             grid-auto-rows: minmax(100px), auto;
             column-gap: 1px;
             row-gap: 1px;
@@ -29,23 +31,6 @@
                 row-gap: 1px;
                 ;
             }
-        }
-
-        .grid-item-1:hover {
-            position: relative;
-            background-color: aqua;
-        }
-
-        .grid-item-2 {
-            grid-column: span 2;
-        }
-
-        .item1 {
-            grid-row-start: span 3;
-        }
-
-        .item2 {
-            grid-column: span 2;
         }
     </style>
 </head>
