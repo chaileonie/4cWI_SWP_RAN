@@ -2,21 +2,21 @@
 interface Airplane {
     model: string;
     passengerCapacity: number;
-    rangeInKM: number;
+    rangeInKm: number;
     isJet: boolean;
 }
 
-let airplanes: Airplane[] = [
+const fleet: Airplane[] = [
     {
-        model: "Boeing 747",
-        passengerCapacity: 416,
-        rangeInKM: 13450,
+        model: "Airbus A350-900",
+        passengerCapacity: 325,
+        rangeInKm: 15000,
         isJet: true
     },
     {
         model: "ATR 72-600",
         passengerCapacity: 78,
-        rangeInKM: 1500,
+        rangeInKm: 1300,
         isJet: false
     }
 ];
@@ -26,12 +26,14 @@ function printAirplaneInfo(plane: Airplane): void {
         ? "Jet engine"
         : "Turboprop/propeller";
 
-
+    console.log("--- Airplane ---");
     console.log(`Model: ${plane.model}`);
     console.log(`Passenger capacity: ${plane.passengerCapacity}`);
-    console.log(`Range: ${plane.rangeInKM} km`);
+    console.log(`Range: ${plane.rangeInKm} km`);
     console.log(`Engine type: ${engineType}`);
+    console.log("----------------");
 }
-airplanes.forEach(printAirplaneInfo);
+
+fleet.forEach(printAirplaneInfo);
 
 
